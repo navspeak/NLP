@@ -1,0 +1,38 @@
+# --- Python Basics ---
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.venv
+venv/
+ENV/
+
+# --- Conda Specific ---
+# It is best practice NOT to commit the environment folder itself.
+# Instead, commit your 'environment.yml' file.
+env/
+venv/
+conda-env/
+.conda/
+
+# --- Jupyter Notebooks ---
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+
+# --- Data & Large Files (Common in PySpark/ML) ---
+# Don't track the actual data, just the code to process it.
+data/
+*.csv
+*.parquet
+*.jsonl
+*.db
+*.sqlite
+
+# --- IDE Specific (VS Code / PyCharm) ---
+.vscode/
+.idea/
+
+# --- Distribution / Build ---
+dist/
+build/
+*.egg-info/
