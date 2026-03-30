@@ -1,0 +1,51 @@
+-------------------------------------------
+1. Morphology: The Structure of Words
+-------------------------------------------
+- Morphology is the study of how words are formed from smaller meaningful units called morphemes.
+- The Focus: Internal word structure (prefixes, suffixes, roots).
+- NLP Task: Stemming or Lemmatization. For example, an NLP model needs to know that "running," "runs," and "ran" all share the same root morphology ("run").
+- Example: In the word unhappiness, the morphemes are un- (not), happy (root), and -ness (state of being).
+-------------------------------------------
+2. Syntax: The Structure of Sentences
+-------------------------------------------
+- Syntax is the "grammar" layer. It dictates the rules for how words are arranged to create grammatically correct sentences.
+- The Focus: Word order, punctuation, and hierarchical structure.
+- NLP Task: Dependency Parsing or Part-of-Speech (POS) Tagging.
+- Example: "The cat chased the mouse" is syntactically correct. "Mouse the chased cat the" is not, even though the words are the same.
+-------------------------------------------
+3. Semantics: The Literal Meaning
+-------------------------------------------
+- Semantics moves beyond the rules and asks: "What do these words actually mean?" It looks at the literal definition of the words combined.
+- The Focus: Meaning of words and their relationships (synonyms, antonyms, etc.).
+- NLP Task: Word Embeddings (Word2Vec) or Named Entity Recognition (NER).
+- Example: If I say "The emerald is green," semantics allows the AI to understand that an emerald is a gemstone and green is a color. It doesn't care about the context yet—just the definitions.
+-------------------------------------------
+4. Pragmatics: The Contextual Meaning
+-------------------------------------------
+- Pragmatics is the most complex layer. It looks at how context, social cues, and intent change the meaning of a sentence. This is where "reading between the lines" happens.
+- The Focus: Intended meaning vs. literal meaning.
+- NLP Task: Sentiment Analysis, Sarcasm Detection, or Dialogue Management.
+- Example: If you ask a friend, "Do you have a watch?" and they answer "Yes" without telling you the time, they have understood the semantics but failed at the pragmatics. The pragmatic intent was: "Tell me what time it is."
+
+1. Bag-of-Words (BoW)
+------------------------
+- This is the simplest approach. It literally throws all the words in a document into a "bag,"
+- ignores their order (Syntax) and context (Pragmatics), and just counts how many times each word appears.
+- The Logic: If two documents use the same words frequently, they are probably about the same topic.
+- The Problem: It gives too much importance to common words like "the," "is," and "and" (Stop words), which don't actually tell you anything about the topic
+- Example:
+   - Doc A: "The cat sat."{the: 1, cat: 1, sat: 1}
+   - Doc B: "The cat chased the mouse."{the: 2, cat: 1, chased: 1, mouse: 1}
+2. TF-IDF (Term Frequency-Inverse Document Frequency)
+------------------------
+- TF-IDF is an "intelligent" version of Bag-of-Words. It scales the word counts based on how unique a word is to a specific document.
+- It consists of two parts:
+    - TF (Term Frequency): How often does the word appear in this document? (More is better).
+    - IDF (Inverse Document Frequency): How rare is this word across all documents in your collection? (Rarer is better)
+
+The "Modern" Gap
+---------------
+It's worth noting that both BoW and TF-IDF treat words as "atoms"—they don't understand that "King" and "Queen" are related. 
+To solve that, we usually move from these frequency-based models to Word Embeddings (like Word2Vec) or Transformers (like BERT).
+
+Scikit-learn => CountVectorizer and TfidfTransformer to process a few sentences?
