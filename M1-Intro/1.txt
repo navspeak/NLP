@@ -49,3 +49,13 @@ It's worth noting that both BoW and TF-IDF treat words as "atoms"—they don't u
 To solve that, we usually move from these frequency-based models to Word Embeddings (like Word2Vec) or Transformers (like BERT).
 
 Scikit-learn => CountVectorizer and TfidfTransformer to process a few sentences?
+===========================================================================================================================
+Lexical Processing
+TEXT Normalization
+Tokenization: Rule based or Library based (NLTK or spaCy) or sub-word Transformers
+  stopword removal
+    Morphenes | Inflection and derviation
+    spelling mistakes => Levenshtein distance (=2 for flaw to lawn, remove f and add n) https://leetcode.com/problems/edit-distance/description/
+    Noisey channel Model => did u mean
+    Stemming - porter stemer -> snowball stemmer | Over and under stemming
+    Lemmatization
