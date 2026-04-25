@@ -27,6 +27,7 @@ data/
 *.jsonl
 *.db
 *.sqlite
+*.pkl
 
 # --- IDE Specific (VS Code / PyCharm) ---
 .vscode/
