@@ -1,0 +1,4 @@
+1. word_tokenize is a function from NLTK that splits a sentence into words (tokens) 
+   - but smarter than a simple .split().
+   - uses Punkt tokenizer + Treebank tokenizer rules
+   - print(word_tokenize("Don't worry, it's fine.")) => ['Do', "n't", 'worry', ',', 'it', "'s", 'fine', '.']
